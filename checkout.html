@@ -18,7 +18,7 @@
         <a href="#" class="text-sm font-medium text-gray-700 hover:text-accent transition-colors">Marketplace</a>
         <a href="#" class="text-sm font-medium text-gray-700 hover:text-accent transition-colors">My Orders</a>
         <a href="#" class="text-sm font-medium text-gray-700 hover:text-accent transition-colors">Help</a>
-        <a href="profile.html" class="flex items-center space-x-1">
+        <a href="#" class="flex items-center space-x-1">
           <div class="w-8 h-8 rounded-full bg-accent flex items-center justify-center text-white">
             <span class="text-sm font-medium">JD</span>
           </div>
@@ -27,236 +27,282 @@
     </div>
   </nav>
 
-  <!-- Page Header -->
+  <!-- Checkout Content -->
   <div class="container mx-auto px-4 py-8">
-    <h1 class="text-3xl font-bold text-gray-900 mb-2">Checkout</h1>
-    <p class="text-gray-600">Complete your purchase</p>
-  </div>
-
-  <!-- Checkout Section -->
-  <div class="container mx-auto px-4 pb-12">
-    <div class="flex flex-col lg:flex-row gap-8">
-      <!-- Order Summary -->
-      <div class="lg:w-2/5 order-2 lg:order-1">
-        <div class="bg-white rounded-xl overflow-hidden shadow-soft border border-gray-100 p-6 mb-6">
+    <h1 class="text-2xl font-bold text-gray-900 mb-8">Checkout</h1>
+    
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+      <!-- Order Summary (Right Side on Desktop) -->
+      <div class="lg:col-span-1 lg:order-2">
+        <div class="card p-6 sticky top-24">
           <h2 class="text-xl font-semibold text-gray-900 mb-4">Order Summary</h2>
           
-          <div class="border-b border-gray-200 pb-4 mb-4">
+          <div class="space-y-4 mb-6">
             <div class="flex items-start">
-              <div class="w-20 h-20 rounded-md bg-gray-200 overflow-hidden flex-shrink-0">
-                <img src="https://images.unsplash.com/photo-1602605657623-01f73283ec75?q=80&w=400&auto=format&fit=crop" 
-                     alt="Organic Rice Straw" class="w-full h-full object-cover">
-              </div>
-              <div class="ml-4 flex-grow">
-                <h3 class="text-base font-medium text-gray-900">Organic Rice Straw</h3>
-                <p class="text-sm text-gray-600">Quantity: <span id="summary-quantity">500</span> kg</p>
-                <p class="text-sm text-gray-600">Price: ₹<span id="summary-price">2.50</span>/kg</p>
+              <img 
+                src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8cmljZSUyMGZhcm18ZW58MHx8MHx8&w=100&q=80" 
+                alt="Rice Straw"
+                class="w-16 h-16 object-cover rounded-md"
+              >
+              <div class="ml-4 flex-1">
+                <div class="flex justify-between">
+                  <h3 class="text-base font-medium text-gray-900">Rice Straw</h3>
+                  <span class="text-gray-900">₹1,250.00</span>
+                </div>
+                <p class="text-sm text-gray-600">Raj Kumar Farms</p>
+                <p class="text-sm text-gray-700">500kg × ₹2.50</p>
               </div>
             </div>
           </div>
           
-          <div class="space-y-3 text-sm mb-4">
-            <div class="flex justify-between">
-              <span class="text-gray-600">Subtotal</span>
-              <span class="text-gray-900 font-medium">₹<span id="summary-subtotal">1,250.00</span></span>
+          <div class="border-t border-gray-200 pt-4 space-y-3">
+            <div class="flex justify-between text-gray-700">
+              <span>Subtotal</span>
+              <span>₹1,250.00</span>
             </div>
-            <div class="flex justify-between">
-              <span class="text-gray-600">Delivery Fee</span>
-              <span class="text-gray-900 font-medium">₹<span id="summary-delivery">300.00</span></span>
+            <div class="flex justify-between text-gray-700">
+              <span>Shipping</span>
+              <span>₹180.00</span>
             </div>
-            <div class="flex justify-between">
-              <span class="text-gray-600">Tax</span>
-              <span class="text-gray-900 font-medium">₹<span id="summary-tax">75.00</span></span>
+            <div class="flex justify-between text-gray-700">
+              <span>Tax (5%)</span>
+              <span>₹62.50</span>
             </div>
           </div>
           
-          <div class="flex justify-between pt-4 border-t border-gray-200">
-            <span class="text-base font-semibold text-gray-900">Total</span>
-            <span class="text-xl font-bold text-gray-900">₹<span id="summary-total">1,625.00</span></span>
-          </div>
-        </div>
-        
-        <div class="bg-white rounded-xl overflow-hidden shadow-soft border border-gray-100 p-6">
-          <h2 class="text-xl font-semibold text-gray-900 mb-4">Seller Information</h2>
-          <div class="flex items-start mb-4">
-            <div class="w-12 h-12 rounded-full bg-accent flex items-center justify-center text-white flex-shrink-0">
-              <span class="text-sm font-medium">RS</span>
-            </div>
-            <div class="ml-4">
-              <h3 class="text-base font-medium text-gray-900">Rajesh Singh</h3>
-              <p class="text-sm text-gray-600">Punjab, India</p>
-              <div class="flex items-center mt-1 text-amber-500">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4">
-                  <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z" clip-rule="evenodd" />
-                </svg>
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4">
-                  <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z" clip-rule="evenodd" />
-                </svg>
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4">
-                  <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z" clip-rule="evenodd" />
-                </svg>
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4">
-                  <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z" clip-rule="evenodd" />
-                </svg>
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4 text-gray-300">
-                  <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z" clip-rule="evenodd" />
-                </svg>
-                <span class="ml-1 text-xs text-gray-600">(4.0)</span>
-              </div>
+          <div class="border-t border-gray-200 mt-4 pt-4">
+            <div class="flex justify-between text-lg font-semibold text-gray-900">
+              <span>Total</span>
+              <span>₹1,492.50</span>
             </div>
           </div>
-          <p class="text-sm text-gray-600">
-            Established organic farmer with over 15 years of experience in sustainable farming practices.
-          </p>
+          
+          <button id="place-order-btn" class="btn btn-primary w-full mt-6">
+            Place Order
+          </button>
         </div>
       </div>
       
-      <!-- Checkout Forms -->
-      <div class="lg:w-3/5 order-1 lg:order-2">
+      <!-- Checkout Form (Left Side on Desktop) -->
+      <div class="lg:col-span-2 lg:order-1">
         <!-- Shipping Information -->
-        <div class="bg-white rounded-xl overflow-hidden shadow-soft border border-gray-100 p-6 mb-6">
+        <div class="card p-6 mb-6">
           <h2 class="text-xl font-semibold text-gray-900 mb-4">Shipping Information</h2>
           
-          <form class="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div class="md:col-span-2">
-              <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Full Name</label>
-              <input type="text" id="name" class="input w-full" placeholder="Enter your full name">
+          <form class="space-y-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div>
+                <label for="first-name" class="block text-sm font-medium text-gray-700 mb-1">First Name</label>
+                <input type="text" id="first-name" name="first-name" class="input w-full" required>
+              </div>
+              <div>
+                <label for="last-name" class="block text-sm font-medium text-gray-700 mb-1">Last Name</label>
+                <input type="text" id="last-name" name="last-name" class="input w-full" required>
+              </div>
             </div>
             
             <div>
               <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
-              <input type="email" id="email" class="input w-full" placeholder="Enter your email">
+              <input type="email" id="email" name="email" class="input w-full" required>
             </div>
             
             <div>
               <label for="phone" class="block text-sm font-medium text-gray-700 mb-1">Phone Number</label>
-              <input type="tel" id="phone" class="input w-full" placeholder="Enter your phone number">
-            </div>
-            
-            <div class="md:col-span-2">
-              <label for="address" class="block text-sm font-medium text-gray-700 mb-1">Address</label>
-              <input type="text" id="address" class="input w-full" placeholder="Enter your street address">
+              <input type="tel" id="phone" name="phone" class="input w-full" required>
             </div>
             
             <div>
-              <label for="city" class="block text-sm font-medium text-gray-700 mb-1">City</label>
-              <input type="text" id="city" class="input w-full" placeholder="Enter your city">
+              <label for="address" class="block text-sm font-medium text-gray-700 mb-1">Street Address</label>
+              <input type="text" id="address" name="address" class="input w-full" required>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+              <div>
+                <label for="city" class="block text-sm font-medium text-gray-700 mb-1">City</label>
+                <input type="text" id="city" name="city" class="input w-full" required>
+              </div>
+              <div>
+                <label for="state" class="block text-sm font-medium text-gray-700 mb-1">State</label>
+                <select id="state" name="state" class="input w-full" required>
+                  <option value="" disabled selected>Select State</option>
+                  <option value="AN">Andaman and Nicobar Islands</option>
+                  <option value="AP">Andhra Pradesh</option>
+                  <option value="AR">Arunachal Pradesh</option>
+                  <option value="AS">Assam</option>
+                  <option value="BR">Bihar</option>
+                  <option value="CH">Chandigarh</option>
+                  <option value="CT">Chhattisgarh</option>
+                  <option value="DN">Dadra and Nagar Haveli</option>
+                  <option value="DD">Daman and Diu</option>
+                  <option value="DL">Delhi</option>
+                  <option value="GA">Goa</option>
+                  <option value="GJ">Gujarat</option>
+                  <option value="HR">Haryana</option>
+                  <option value="HP">Himachal Pradesh</option>
+                  <option value="JK">Jammu and Kashmir</option>
+                  <option value="JH">Jharkhand</option>
+                  <option value="KA">Karnataka</option>
+                  <option value="KL">Kerala</option>
+                  <option value="LA">Ladakh</option>
+                  <option value="LD">Lakshadweep</option>
+                  <option value="MP">Madhya Pradesh</option>
+                  <option value="MH">Maharashtra</option>
+                  <option value="MN">Manipur</option>
+                  <option value="ML">Meghalaya</option>
+                  <option value="MZ">Mizoram</option>
+                  <option value="NL">Nagaland</option>
+                  <option value="OR">Odisha</option>
+                  <option value="PY">Puducherry</option>
+                  <option value="PB">Punjab</option>
+                  <option value="RJ">Rajasthan</option>
+                  <option value="SK">Sikkim</option>
+                  <option value="TN">Tamil Nadu</option>
+                  <option value="TG">Telangana</option>
+                  <option value="TR">Tripura</option>
+                  <option value="UP">Uttar Pradesh</option>
+                  <option value="UT">Uttarakhand</option>
+                  <option value="WB">West Bengal</option>
+                </select>
+              </div>
+              <div>
+                <label for="pincode" class="block text-sm font-medium text-gray-700 mb-1">PIN Code</label>
+                <input type="text" id="pincode" name="pincode" class="input w-full" required>
+              </div>
             </div>
             
             <div>
-              <label for="state" class="block text-sm font-medium text-gray-700 mb-1">State</label>
-              <input type="text" id="state" class="input w-full" placeholder="Enter your state">
-            </div>
-            
-            <div>
-              <label for="postal-code" class="block text-sm font-medium text-gray-700 mb-1">Postal Code</label>
-              <input type="text" id="postal-code" class="input w-full" placeholder="Enter postal code">
-            </div>
-            
-            <div>
-              <label for="country" class="block text-sm font-medium text-gray-700 mb-1">Country</label>
-              <input type="text" id="country" class="input w-full" placeholder="Enter your country">
-            </div>
-            
-            <div class="md:col-span-2">
-              <label for="notes" class="block text-sm font-medium text-gray-700 mb-1">Delivery Notes (optional)</label>
-              <textarea id="notes" rows="3" class="input w-full" placeholder="Any special instructions for delivery"></textarea>
+              <label for="shipping-notes" class="block text-sm font-medium text-gray-700 mb-1">Delivery Instructions (Optional)</label>
+              <textarea id="shipping-notes" name="shipping-notes" rows="3" class="input w-full"></textarea>
             </div>
           </form>
         </div>
         
         <!-- Payment Information -->
-        <div class="bg-white rounded-xl overflow-hidden shadow-soft border border-gray-100 p-6 mb-6">
-          <h2 class="text-xl font-semibold text-gray-900 mb-4">Payment Method</h2>
+        <div class="card p-6">
+          <h2 class="text-xl font-semibold text-gray-900 mb-4">Payment Information</h2>
           
-          <div class="space-y-4">
-            <div class="flex items-center">
-              <input id="payment-card" name="payment-method" type="radio" checked class="h-4 w-4 text-accent focus:ring-accent border-gray-300">
-              <label for="payment-card" class="ml-3 block text-sm font-medium text-gray-700">
-                Credit / Debit Card
-              </label>
-            </div>
-            
-            <div class="border-t border-gray-200 pt-4" id="card-details">
-              <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div class="md:col-span-2">
-                  <label for="card-number" class="block text-sm font-medium text-gray-700 mb-1">Card Number</label>
-                  <input type="text" id="card-number" class="input w-full" placeholder="1234 5678 9012 3456">
-                </div>
-                
-                <div>
-                  <label for="card-name" class="block text-sm font-medium text-gray-700 mb-1">Name on Card</label>
-                  <input type="text" id="card-name" class="input w-full" placeholder="Enter name on card">
-                </div>
-                
-                <div class="flex space-x-4">
-                  <div class="w-1/2">
-                    <label for="expiry" class="block text-sm font-medium text-gray-700 mb-1">Expiry Date</label>
-                    <input type="text" id="expiry" class="input w-full" placeholder="MM/YY">
-                  </div>
-                  
-                  <div class="w-1/2">
-                    <label for="cvv" class="block text-sm font-medium text-gray-700 mb-1">CVV</label>
-                    <input type="text" id="cvv" class="input w-full" placeholder="123">
-                  </div>
-                </div>
+          <div class="mb-6">
+            <div class="flex space-x-4 mb-4">
+              <div class="flex items-center">
+                <input type="radio" id="payment-online" name="payment-method" value="online" class="h-4 w-4 text-accent focus:ring-accent border-gray-300" checked>
+                <label for="payment-online" class="ml-2 text-gray-700">Online Payment</label>
+              </div>
+              <div class="flex items-center">
+                <input type="radio" id="payment-cod" name="payment-method" value="cod" class="h-4 w-4 text-accent focus:ring-accent border-gray-300">
+                <label for="payment-cod" class="ml-2 text-gray-700">Cash on Delivery</label>
               </div>
             </div>
             
-            <div class="flex items-center mt-4">
-              <input id="payment-upi" name="payment-method" type="radio" class="h-4 w-4 text-accent focus:ring-accent border-gray-300">
-              <label for="payment-upi" class="ml-3 block text-sm font-medium text-gray-700">
-                UPI
-              </label>
+            <div id="online-payment-form" class="space-y-4">
+              <div>
+                <label for="card-number" class="block text-sm font-medium text-gray-700 mb-1">Card Number</label>
+                <input type="text" id="card-number" name="card-number" placeholder="1234 5678 9012 3456" class="input w-full" required>
+              </div>
+              
+              <div class="grid grid-cols-2 gap-4">
+                <div>
+                  <label for="card-expiry" class="block text-sm font-medium text-gray-700 mb-1">Expiry Date</label>
+                  <input type="text" id="card-expiry" name="card-expiry" placeholder="MM/YY" class="input w-full" required>
+                </div>
+                <div>
+                  <label for="card-cvc" class="block text-sm font-medium text-gray-700 mb-1">CVC</label>
+                  <input type="text" id="card-cvc" name="card-cvc" placeholder="123" class="input w-full" required>
+                </div>
+              </div>
+              
+              <div>
+                <label for="card-name" class="block text-sm font-medium text-gray-700 mb-1">Name on Card</label>
+                <input type="text" id="card-name" name="card-name" class="input w-full" required>
+              </div>
             </div>
             
-            <div class="flex items-center mt-4">
-              <input id="payment-cash" name="payment-method" type="radio" class="h-4 w-4 text-accent focus:ring-accent border-gray-300">
-              <label for="payment-cash" class="ml-3 block text-sm font-medium text-gray-700">
-                Cash on Delivery
+            <div id="cod-payment-info" class="mt-4 p-4 bg-gray-50 rounded-md hidden">
+              <p class="text-gray-700">
+                You'll be required to pay ₹1,492.50 in cash at the time of delivery. Please ensure you have the exact amount ready.
+              </p>
+            </div>
+          </div>
+          
+          <div class="border-t border-gray-200 pt-6">
+            <div class="flex items-center">
+              <input type="checkbox" id="terms" name="terms" class="h-4 w-4 text-accent focus:ring-accent border-gray-300 rounded" required>
+              <label for="terms" class="ml-2 text-sm text-gray-700">
+                I agree to the <a href="#" class="text-accent hover:underline">Terms of Service</a> and <a href="#" class="text-accent hover:underline">Privacy Policy</a>
               </label>
             </div>
           </div>
         </div>
-        
-        <button type="button" onclick="window.location.href='welcome.html'" class="btn-primary w-full py-4 text-lg font-medium">
-          Place Order
-        </button>
-        <p class="text-xs text-center text-gray-600 mt-4">
-          By placing an order, you agree to our <a href="#" class="text-accent hover:underline">Terms of Service</a> and <a href="#" class="text-accent hover:underline">Privacy Policy</a>.
-        </p>
       </div>
     </div>
   </div>
-  
+
+  <!-- Success Modal -->
+  <div id="success-modal" class="fixed inset-0 flex items-center justify-center z-50 bg-black/50 hidden">
+    <div class="bg-white rounded-lg p-8 max-w-md w-full mx-4">
+      <div class="text-center">
+        <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8 text-green-600">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+        </div>
+        <h2 class="text-2xl font-bold text-gray-900 mb-2">Order Placed Successfully!</h2>
+        <p class="text-gray-600 mb-6">
+          Your order has been placed successfully. You will receive an email confirmation shortly.
+        </p>
+        <p class="text-sm text-gray-600 mb-6">
+          Order ID: <span class="font-medium">AGC-10243789</span>
+        </p>
+        <div class="flex space-x-4">
+          <a href="welcome.html" class="btn btn-outline w-1/2">
+            Continue Shopping
+          </a>
+          <button id="close-modal" class="btn btn-primary w-1/2">
+            Track Order
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- Footer -->
-  <footer class="bg-white border-t border-gray-200 py-8 px-4">
+  <footer class="bg-white border-t border-gray-200 py-8 px-4 mt-12">
     <div class="container mx-auto text-center">
       <p class="text-sm text-gray-600">© 2023 AgriConnect. All rights reserved.</p>
     </div>
   </footer>
 
   <script>
-    // Payment method toggle
-    const cardRadio = document.getElementById('payment-card');
-    const upiRadio = document.getElementById('payment-upi');
-    const cashRadio = document.getElementById('payment-cash');
-    const cardDetails = document.getElementById('card-details');
-    
-    function updatePaymentMethod() {
-      if (cardRadio.checked) {
-        cardDetails.style.display = 'block';
-      } else {
-        cardDetails.style.display = 'none';
-      }
-    }
-    
-    cardRadio.addEventListener('change', updatePaymentMethod);
-    upiRadio.addEventListener('change', updatePaymentMethod);
-    cashRadio.addEventListener('change', updatePaymentMethod);
-    
-    // Initialize
-    updatePaymentMethod();
+    document.addEventListener('DOMContentLoaded', () => {
+      // Payment method toggle
+      const onlinePaymentRadio = document.getElementById('payment-online');
+      const codPaymentRadio = document.getElementById('payment-cod');
+      const onlinePaymentForm = document.getElementById('online-payment-form');
+      const codPaymentInfo = document.getElementById('cod-payment-info');
+      
+      onlinePaymentRadio.addEventListener('change', () => {
+        onlinePaymentForm.classList.remove('hidden');
+        codPaymentInfo.classList.add('hidden');
+      });
+      
+      codPaymentRadio.addEventListener('change', () => {
+        onlinePaymentForm.classList.add('hidden');
+        codPaymentInfo.classList.remove('hidden');
+      });
+      
+      // Place order button and modal
+      const placeOrderBtn = document.getElementById('place-order-btn');
+      const successModal = document.getElementById('success-modal');
+      const closeModalBtn = document.getElementById('close-modal');
+      
+      placeOrderBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        successModal.classList.remove('hidden');
+      });
+      
+      closeModalBtn.addEventListener('click', () => {
+        successModal.classList.add('hidden');
+      });
+    });
   </script>
 </body>
 </html>

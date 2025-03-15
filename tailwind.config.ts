@@ -7,6 +7,7 @@ export default {
     "*.html",
     "./**/*.html",
     "./**/*.js",
+    "./src/**/*.{js,jsx,ts,tsx}",
   ],
   prefix: "",
   theme: {
